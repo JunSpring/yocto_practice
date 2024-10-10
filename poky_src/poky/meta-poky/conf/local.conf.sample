@@ -265,3 +265,14 @@ PACKAGECONFIG_append_pn-qemu-system-native = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
+
+# Specify own pre-mirror location
+INHERIT += "own-mirrors"
+SOURCE_MIRROR_URL = "file://${COREBASE}/../source-mirrors"
+
+# compress tarballs for mirrors
+BB_GENERATE_MIRROR_TARBALLS = "1"
+
+# make shared state cache mirror
+SSTATE_MIRRORS = "file://.* file://${COREBASE}/../sstate-cache/PATH"
+SSTATE_DIR = "${TOPDIR}/sstate-cache"
