@@ -4,3 +4,6 @@
 ./sstate-cache
 __pycache__/
 pyshtables.py
+
+tmp/
+*.log
