@@ -1,0 +1,6 @@
+./build/*
+!./build/conf/
+./source-mirror
+./sstate-cache
+__pycache__/
+pyshtables.py
