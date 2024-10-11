@@ -1,13 +1,12 @@
 DESCRIPTION = "Simple hello example"
 LICENSE = "CLOSED"
 
-VAR4 = "123"
-VAR4_append = "456"
-VAR4 += "789"
+VAR1 = "123 456 789 123456789 789 456 123"
+VAR1_remove = "123"
 
 do_printhello(){
         bbwarn "hello world!"
-        bbwarn "VAR4: ${VAR4}"
+        bbwarn "VAR1: ${VAR1}"
 }
 
 addtask do_printhello after do_compile before do_install
